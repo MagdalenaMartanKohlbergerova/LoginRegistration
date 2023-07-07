@@ -26,13 +26,20 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 999;
 }
 
 .logo{
     font-size: 2em;
     color: white;
     user-select: none;
+}
+
+.icon{
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    display: none;
 }
 
 .navigation a{
@@ -256,6 +263,38 @@ header{
 
 .login-register p a:hover{
     text-decoration: underline;
+}
+
+/* media queries for web responsive */
+
+@media (max-width:900px){
+    header{
+    background-color: rgba(2, 2, 20, 0.567) 
+    }
+   .icon{
+    display: inline-block;
+   }
+   header .navigation{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 15rem;
+    height: 50vh;
+    background-color: rgba(2, 2, 20, 0.567);
+   }
+   header .navigation.active{
+    right: 0;
+   }
+   header .navigation a{
+    display: block;
+    padding: 1em;
+   }
+   header button{
+    margin-block: 1em;
+   }
+   .wrapper.active{
+    height: 480px;
+   }
 }
 
 
