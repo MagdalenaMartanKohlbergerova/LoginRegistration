@@ -310,3 +310,10 @@ header {
         height: 480px;
     }
 }
+
+@media only screen and (max-width:500px){
+    .wrapper{
+        width: 310px;
+        margin-block-start: 5rem;
+    }
+}
